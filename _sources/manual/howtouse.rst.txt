@@ -1,0 +1,210 @@
+
+
+=========================
+ 利用手順
+=========================
+ 
+Ayugeneratorの起動
+====================================
+"C:\\Johnson Controls\\JCJPN\\Ayugenerator\\AyugeneratorUI.exe"を起動してください。
+
+Ayugeneratorの設定
+====================================
+Ayugeneratorの設定を行います。
+メニューから **Setting** を選択してください。 
+
+..  figure:: images/setting_open.png
+   :scale: 100
+   :align: left
+   :target: http://sphinx-users.jp/
+
+設定ウィンドウが表示されます。
+
+..  figure:: images/setting.png
+   :scale: 100
+   :align: left
+   :target: http://sphinx-users.jp/
+
+SQL Connection Setting
+   MUI impファイル作成時にSCTからグラフィックを引き継ぐ場合に使用します。
+
+Open log file when process end.
+   各処理完了後にログ・ファイルを自動で開く設定です。
+
+Create log file.
+   各処理完了後にログ・ファイルを作成するかの設定です。
+
+
+
+
+IMPファイルの作成する
+====================================
+IMPファイルの作成手順を説明します。
+
+
+1. 出力対象を選択してください。(複数選択可)
+2. 出力先を指定してください。
+3. Createボタンをクリックしてください。
+
+..  figure:: images/create_imp_1.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+
+出力されたimpファイルは上記2で指定したディレクトリに保存されています。
+ファイルを確認するには メニューから **File / Open Folder** から開くことができます。
+
+
+
+..  figure:: images/open_folder.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+
+
+Metasys UI のimpファイル作成
+------------------------------------------
+
+選択項目からMetasys UIを選ぶと、以下のオブジェクトをまとめて出力します。
+
+* Equipment Definition
+* Equipment
+* Space
+
+| また、Metasys UI のimpファイル作成の場合、以下のようにダイアログが表示されます。
+| これはEquipment Definition, Equipment, Spaceに割り当てたグラフィック情報をどこから引き継ぐか指定します。
+
+
+..  figure:: images/inherit_graphic.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+* SCT ... SCT内のグラフィック情報を引き継ぎます。
+* Yomitori-MSEA Excel ... Excelファイルから引き継ぎます。
+* No Graphics ... グラフィックを引き継ぎません。
+
+
+SCTからオブジェクトを削除する
+======================================================
+アーカイブ内のオブジェクトを削除します。
+
+Ayugeneratorを起動し、メニューから **Delete Objects** を選択してください。 
+
+..  figure:: images/run_delete.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+1. 削除対象のアーカイブへのSQL Server接続情報を入力してください。
+2. 削除対象のアイテムを選択してください。(複数選択可能)
+3. Deleteボタンをクリックしてください。
+
+..  figure:: images/select_deleting_item.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+All
+   Programming以外のすべてにチェックを入れます。
+Point
+   デバイスのControlフォルダ、トランク内のオブジェクトを削除します。
+Schedule
+   デバイスのScheduleフォルダ内のオブジェクトを削除します。
+Metasys UI
+   Site Director配下のEquipment Definition,  $$site配下のEquipment, Spaceを削除します。
+User View
+   Site Director配下のUser Viewを削除します。
+Trend Study
+   デバイスのTrendフォルダ内のオブジェクトを削除します。
+Programming
+   デバイスのProgrammingフォルダ内のオブジェクトを削除します。
+
+
+
+.. warning::
+   * Programmingフォルダ配下のオブジェクトはAyugeneratorでは作成できないものが含まれています。削除する際は注意してください。
+   * Allを選択した場合、Programmingは選択しません。
+
+
+デバイス一覧が表示されます。削除対象デバイスを選択し、Startボタンをクリックしてください。
+
+..  figure:: images/select_device.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+
+| 確認ダイアログが表示されます。 Yes を選択してください。   
+| Noを選択するとキャンセルされます。
+
+..  figure:: images/ask_delete.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+
+| "Complete" のダイアログが表示されれば完了です。 
+
+..  figure:: images/select_device.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+
+
+
+
+連動表を作成する
+======================================================
+| 連動表を作成します。
+
+1. 連動表出力先を指定してください。
+2. メニューから **Create Rendo Sheet** を選択してください。
+
+..  figure:: images/rendo_create.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+3. Ayugenerator Excelファイルを選択してください。
+
+..  figure:: images/rendo_select_file.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+
+出力が完了すると、自動で作成された連動表が開きます。
+
+..  figure:: images/rendo_open.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+
+
+
+
+Hiragene CSV ファイルをAyugenerator Excelへ取り込む
+========================================================================
+
+.. note::
+   注意してください
+
+.. warning::
+   警告で
+
+ :著者: Tarek
+ :出版社: Packt Publishing
+ 
+ IMPファイルを作成する
+ ========================================
+
+Pythonのエキスパート向けの本。Pythonの内部のアルゴリズムにも言及しつつ
+マニアックな文法の適切な使い方の紹介に始まり、アジャイルソフトウェア開発
+をPythonで行うためのテストツール、継続的インテグレーションのツールなどの
+紹介や、よりよいプログラムのための、Pythonのためのデザインパターン、
+パフォーマンスチューニングなど、幅広く、深い内容の本。

@@ -1,0 +1,74 @@
+====================
+セットアップ
+====================
+
+.. note::
+   Ayugenerator 3.x は以下のPCで動作します。
+
+   .. csv-table:: 
+      :widths: 15, 30
+      :stub-columns: 1
+
+      "OS", "Windows 10 64bit"
+      "Microsoft Excel", "2016,2019"
+      ".NET Framework", "4.6.0以上"
+
+
+
+インストーラは |SHAREPOINT| から入手してください。
+
+SharePointからダウンロードしたmsiファイルをダブルクリックで実行してください。
+
+..  figure:: imgs/installer-icon.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+「Next」を選択してください。
+
+..  figure:: imgs/install_01.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+「Next」を選択してください。
+
+..  figure:: imgs/install_02.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+「Next」を選択してください。
+
+..  figure:: imgs/install_03.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+「Close」を選択してください。
+
+..  figure:: imgs/install_04.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+
+以上でインストール作業は完了です。
+"C:\\Johnson Controls\\JCJPN\\Ayugenerator"に以下のファイル群が格納されていることを確認してください。
+
+..  figure:: imgs/ayugenerator-files.png
+   :scale: 100
+   :align: center
+   :target: http://sphinx-users.jp/
+
+以上でセットアップは完了です。
+
+
+
+
+.. HyperLinks
+.. _SharePoint: https://my.jci.com/sites/BEJapanProductInfo/Tools/Ayugenerator_msea/SitePages/Home.aspx
+
+.. |SHAREPOINT| raw:: html
+
+  <a href="https://my.jci.com/sites/BEJapanProductInfo/Tools/Ayugenerator_msea/SitePages/Home.aspx" target="_blank">Share Point</a>
